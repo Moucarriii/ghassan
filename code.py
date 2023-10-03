@@ -284,7 +284,7 @@ with h1:
           Netflix has the most international movies added, and Dramas comes second
          </p>
             """,unsafe_allow_html = True)
-# V- Ratings for all content on Netflix
+# V- Ratings for all content on Netflix hhhhhhh
 with w1:
         st.markdown("""
         <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
@@ -313,17 +313,16 @@ with w1:
           Netflix has the most TV-MA-rated content (36.4 %)
          </p>
             """,unsafe_allow_html = True)
-# VI- TV shows duration in Netflix
-
+# VI- TV shows duration in Netflix sssssssssssssssssssss
 with w1:
-        st.markdown("""
-        <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
-        VI- TV shows duration in Netflix
-         </h3>
-         <p class="f5 f4-ns lh-copy measure mb4" style="text-align: justify;font-family: Sans Serif">
-         
-         </p>
-            """,unsafe_allow_html = True)
+    st.markdown("""
+    <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
+    VI- TV shows duration in Netflix
+     </h3>
+     <p class="f5 f4-ns lh-copy measure mb4" style="text-align: justify;font-family: Sans Serif">
+     
+     </p>
+        """,unsafe_allow_html = True)
 
 df_tv_show = df.loc[df['type'] == 'TV Show']
 df_tv_show['duration'] = df_tv_show['duration'].str.replace(' Seasons', ' Season')
@@ -337,14 +336,15 @@ fig = px.pie(df_7, values='Number of TV Show', names='duration',
              color_discrete_sequence=px.colors.sequential.RdBu, title='TV shows duration in Netflix')
 
 fig.update_traces(textposition='inside', textinfo='percent+label')
-w2.plotly_chart(fig, use_container_width=True)
+w2.plotly_chart(fig, use_container_width=True)  # Changed w1 to w2 here
 
 with w1:
-        st.markdown("""
-        <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
-        
-         </h3>
-         <p class="f5 f4-ns lh-copy measure mb4" style="text-align: justify;font-family: Sans Serif">
-          TV shows with a duration of 1 season the largest number
-         </p>
-            """,unsafe_allow_html = True)
+    st.markdown("""
+    <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
+    
+     </h3>
+     <p class="f5 f4-ns lh-copy measure mb4" style="text-align: justify;font-family: Sans Serif">
+      TV shows with a duration of 1 season the largest number
+     </p>
+        """,unsafe_allow_html = True)
+
